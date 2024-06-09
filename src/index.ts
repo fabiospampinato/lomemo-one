@@ -5,7 +5,7 @@ import type {FN} from './types';
 
 /* MAIN */
 
-const memoizeOnce = <Arguments extends unknown[], Return> ( fn: FN<Arguments, Return>, resolver?: FN<Arguments, unknown> ): FN<Arguments, Return> => {
+const memoizeOne = <Arguments extends unknown[], Return> ( fn: FN<Arguments, Return>, resolver?: FN<Arguments, unknown> ): FN<Arguments, Return> => {
 
   let inited = false;
   let cachedKey: unknown;
@@ -31,4 +31,4 @@ const memoizeOnce = <Arguments extends unknown[], Return> ( fn: FN<Arguments, Re
 
 /* EXPORT */
 
-export default memoizeOnce;
+export default memoizeOne;

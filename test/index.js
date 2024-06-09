@@ -2,16 +2,16 @@
 /* IMPORT */
 
 import {describe} from 'fava';
-import lomemoOnce from '../dist/index.js';
+import lomemoOne from '../dist/index.js';
 
 /* MAIN */
 
-describe ( 'Lomemo Once', it => {
+describe ( 'Lomemo One', it => {
 
   it ( 'can memoize a function, keying on the first argument', t => {
 
     const fn = ( a, b ) => a + b;
-    const mfn = lomemoOnce ( fn );
+    const mfn = lomemoOne ( fn );
 
     t.is ( mfn ( 1, 2 ), 3 );
     t.is ( mfn ( 1, 5 ), 3 );
@@ -26,7 +26,7 @@ describe ( 'Lomemo Once', it => {
   it ( 'can memoize a function, keying on a custom function', t => {
 
     const fn = ( a, b ) => a + b;
-    const mfn = lomemoOnce ( fn, ( ...args ) => args.join ( '' ) );
+    const mfn = lomemoOne ( fn, ( ...args ) => args.join ( '' ) );
 
     t.is ( mfn ( 1, 2 ), 3 );
     t.is ( mfn ( 1, 5 ), 6 );
@@ -43,7 +43,7 @@ describe ( 'Lomemo Once', it => {
 
     const results = [];
     const fn = function ( arg ) { results.push ( this, arg ) };
-    const mfn = lomemoOnce ( fn );
+    const mfn = lomemoOne ( fn );
 
     mfn ( 123 )
     mfn.call ( 1, 2 );
@@ -56,7 +56,7 @@ describe ( 'Lomemo Once', it => {
 
     const results = [];
     const fn = () => {};
-    const mfn = lomemoOnce ( fn, function ( arg ) { results.push ( this, arg ); } );
+    const mfn = lomemoOne ( fn, function ( arg ) { results.push ( this, arg ); } );
 
     mfn ( 123 )
     mfn.call ( 1, 2 );

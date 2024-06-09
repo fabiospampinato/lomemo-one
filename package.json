@@ -1,6 +1,6 @@
 {
-  "name": "lomemo-once",
-  "repository": "github:fabiospampinato/lomemo-once",
+  "name": "lomemo-one",
+  "repository": "github:fabiospampinato/lomemo-one",
   "description": "A variant of lodash's memoize function that remembers only one result, the last one.",
   "version": "1.0.0",
   "type": "module",
@@ -18,7 +18,7 @@
   "keywords": [
     "lodash",
     "memoize",
-    "once",
+    "one",
     "function"
   ],
   "devDependencies": {

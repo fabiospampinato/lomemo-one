@@ -1,21 +1,21 @@
-# Lomemo Once
+# Lomemo One
 
 A variant of [lodash's memoize function](https://www.npmjs.com/package/lodash.memoize) that remembers only one result, the last one.
 
 ## Install
 
 ```sh
-npm install --save lomemo-once
+npm install --save lomemo-one
 ```
 
 ## Usage
 
 ```ts
-import lomemoOnce from 'lomemo-once';
+import lomemoOne from 'lomemo-one';
 
 // Memoize a function, using the first argument as the key
 
-const memoized = lomemoOnce ( ( a, b ) => a + b );
+const memoized = lomemoOne ( ( a, b ) => a + b );
 
 memoized ( 1, 2 ); // => 3
 memoized ( 1, 5 ); // => 3
@@ -25,7 +25,7 @@ memoized ( 1, 5 ); // => 6
 // Memoize a function, using a custom function to generate the key
 
 const resolver = ( ...args ) => args.join ( '' );
-const memoized = lomemoOnce ( ( a, b ) => a + b, resolver );
+const memoized = lomemoOne ( ( a, b ) => a + b, resolver );
 
 memoized ( 1, 2 ); // => 3
 memoized ( 1, 5 ); // => 6
