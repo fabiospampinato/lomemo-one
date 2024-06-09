@@ -2,7 +2,7 @@
   "name": "lomemo-one",
   "repository": "github:fabiospampinato/lomemo-one",
   "description": "A variant of lodash's memoize function that remembers only one result, the last one.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
