@@ -1,0 +1,29 @@
+{
+  "name": "lomemo-once",
+  "repository": "github:fabiospampinato/lomemo-once",
+  "description": "A variant of lodash's memoize function that remembers only one result, the last one.",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "test": "tsex test",
+    "test:watch": "tsex test --watch",
+    "prepublishOnly": "tsex prepare"
+  },
+  "keywords": [
+    "lodash",
+    "memoize",
+    "once",
+    "function"
+  ],
+  "devDependencies": {
+    "fava": "^0.3.2",
+    "tsex": "^4.0.2",
+    "typescript": "^5.5.0-beta"
+  }
+}
