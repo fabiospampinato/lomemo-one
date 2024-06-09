@@ -15,7 +15,7 @@ import lomemoOnce from 'lomemo-once';
 
 // Memoize a function, using the first argument as the key
 
-const memoized = lomemo ( ( a, b ) => a + b );
+const memoized = lomemoOnce ( ( a, b ) => a + b );
 
 memoized ( 1, 2 ); // => 3
 memoized ( 1, 5 ); // => 3
@@ -25,7 +25,7 @@ memoized ( 1, 5 ); // => 6
 // Memoize a function, using a custom function to generate the key
 
 const resolver = ( ...args ) => args.join ( '' );
-const memoized = lomemo ( ( a, b ) => a + b, resolver );
+const memoized = lomemoOnce ( ( a, b ) => a + b, resolver );
 
 memoized ( 1, 2 ); // => 3
 memoized ( 1, 5 ); // => 6
