@@ -5,7 +5,7 @@ A variant of [lodash's memoize function](https://www.npmjs.com/package/lodash.me
 ## Install
 
 ```sh
-npm install --save lomemo-one
+npm install lomemo-one
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install --save lomemo-one
 ```ts
 import lomemoOne from 'lomemo-one';
 
-// Memoize a function, using the first argument as the key
+// Let's memoize a function, using the first argument as the key
 
 const memoized = lomemoOne ( ( a, b ) => a + b );
 
@@ -22,7 +22,7 @@ memoized ( 1, 5 ); // => 3
 memoized ( 2, 8 ); // => 10
 memoized ( 1, 5 ); // => 6
 
-// Memoize a function, using a custom function to generate the key
+// Let's memoize a function, using a custom function to generate the key
 
 const resolver = ( ...args ) => args.join ( '' );
 const memoized = lomemoOne ( ( a, b ) => a + b, resolver );
